@@ -17,6 +17,8 @@ public class PhoneNumberController : ControllerBase
         _phoneNumberService = phoneNumberService;
     }
 
+    // ideally this would be in a separate controller 
+    // but just this once I'm going to keep it here
     [HttpGet]
     [Route("availableCountries")]
     [Produces("application/json")]

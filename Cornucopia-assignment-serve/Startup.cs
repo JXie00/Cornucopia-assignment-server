@@ -45,6 +45,12 @@ public class Startup
         }
 
         app.UseRouting();
+
+        app.UseCors(x => x
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetIsOriginAllowed(origin => true)); // allow any origin
+
         app.UseSwagger();
         app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
